@@ -1,29 +1,33 @@
 form {
-    border: 2px solid red;
     width: 50vw;
     height: 75vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-
-}
-
+    justify-content: space-between;
+input {
+        display: grid;
+        grid-column: span 4;
+        margin-bottom: 10px;
+        height: 25vh;
+        width: 90vw;
+        font-size: 70px;
+    }
 button {
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
-    align-items: center;
-
-}
-
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        align-items: center;
+    
+    }
 .acButton {
-    display: grid;
-    grid-column: span 3;
-    width: 100%;
-}
-
+        display: grid;
+        grid-column: span 3;
+        width: 100%;
+    }
 .equalsButton {
-    display: grid;
-    grid-column: span 2;
-    width: 100%;
+        display: grid;
+        grid-column: span 2;
+        width: 100%;
+    }
 }
