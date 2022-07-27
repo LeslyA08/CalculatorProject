@@ -4,4 +4,5 @@ Button for each thing
 make super simple first then add styling
 must get javascript down first, then styling 
 there must be a disolay that shows the numbers being input
-AC button must clear the screen.*/
+AC button must clear the screen.
+once button is pressed and appears on the screen, start formulations/functions*/
