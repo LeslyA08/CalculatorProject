@@ -9,25 +9,26 @@
 </head>
 <body>
     <h1>First Javascript project: Calculator</h1>
-    <form>
-        <input />
+    <form name="form1">
+        <input class= "input1" name="input1" />
         <button class="acButton">AC</button>
-        <button>/</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>*</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>-</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>+</button>
-        <button>.</button>
-        <button class="buttonZero">0</button>
-        <button class="equalsButton">=</button>
+        <input class= "button" type="button" value="/" onclick="form1.input1.value += '/'">
+        <input class= "button" type="button" value="1" onclick="form1.input1.value += 1">
+        <input class= "button" type="button" value="2" onclick="form1.input1.value += 2">
+        <input class= "button" type="button" value="3" onclick="form1.input1.value += 3">
+        <input class= "button" type="button" value="*" onclick="form1.input1.value += '*'">
+        <input class= "button" type="button" value="4" onclick="form1.input1.value += 4">
+        <input class= "button" type="button" value="5" onclick="form1.input1.value += 5">
+        <input class= "button" type="button" value="6" onclick="form1.input1.value += 6">
+        <input class= "button" type="button" value="-" onclick="form1.input1.value += '-'">
+        <input class= "button" type="button" value="7" onclick="form1.input1.value += 7">
+        <input class= "button" type="button" value="8" onclick="form1.input1.value += 8">
+        <input class= "button" type="button" value="9" onclick="form1.input1.value += 9">
+        <input class= "button" type="button" value="+" onclick="form1.input1.value += '+'">
+        <input class= "button" type="button" value="." onclick="form1.input1.value += '.'">
+        <input class= "button" type="button" value="0" onclick="form1.input1.value += 0">
+        <button class="equalsButton" type="button" value="=">=</button>
     </form>
+    <script src="./script.js"></script>
 </body>
 </html>
