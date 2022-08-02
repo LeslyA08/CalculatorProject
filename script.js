@@ -7,19 +7,22 @@ there must be a disolay that shows the numbers being input
 AC button must clear the screen.
 once button is pressed and appears on the screen, start formulations/functions*/
 
-const button = document.querySelectorAll(".button");
-const input = document.querySelector(".input1")
-const form = document.querySelector("form");
-
-/*if (operator == '+') {
+const calculate= (number1, operator, number2) => {
+  let result = ''
+  if (operator === 'add') {
   result = number1 + number2;
 }
-else if (operator == '-') {
+else if (operator === 'subtract') {
   result = number1 - number2;
 }
-else if (operator == '*') {
+else if (operator === 'multiply') {
   result = number1 * number2;
 }
-else {
-  result = number1 / number2;
+else if (operator === 'divide') {
+  result = (number1 / number2);
 }
+return result;
+}
+
+keys.addEventListener('click'), e => {
+  if (e.target.matches('button'))}
