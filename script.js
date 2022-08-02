@@ -25,4 +25,4 @@ return result;
 }
 
 keys.addEventListener('click'), e => {
-  if (e.target.matches('button'))}
+  if (e.target.matches('button')) }
