@@ -1,4 +1,4 @@
-form {
+.calculator_keys {
   width: 50vw;
   height: 75vh;
   display: grid;
@@ -6,7 +6,7 @@ form {
   grid-template-rows: 1fr 1fr 1fr 1fr;
   justify-content: space-between;
 }
-form .input1 {
+.calculator_keys .calculator_display {
   display: grid;
   grid-column: span 4;
   margin-bottom: 10px;
@@ -15,18 +15,18 @@ form .input1 {
   font-size: 60px;
   text-align: right;
 }
-form .button {
+.calculator_keys button {
   height: 90px;
   width: 90px;
   border-radius: 50px;
   align-items: center;
 }
-form .acButton {
+.calculator_keys .AC {
   display: grid;
   grid-column: span 3;
   width: 100%;
 }
-form .equalsButton {
+.calculator_keys .equalsButton {
   display: grid;
   grid-column: span 2;
   width: 100%;

@@ -11,3 +11,15 @@ const button = document.querySelectorAll(".button");
 const input = document.querySelector(".input1")
 const form = document.querySelector("form");
 
+/*if (operator == '+') {
+  result = number1 + number2;
+}
+else if (operator == '-') {
+  result = number1 - number2;
+}
+else if (operator == '*') {
+  result = number1 * number2;
+}
+else {
+  result = number1 / number2;
+}
