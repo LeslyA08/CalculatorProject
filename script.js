@@ -1,7 +1,7 @@
 const calculate= (number1, operator, number2) => {
   let result = ''
   if (operator === '+') {
-  result = number1 + parseInt(number2);
+  result = parseFloat(number1) + parseFloat(number2);
 }
 else if (operator === '-') {
   result = number1 - number2;
@@ -28,9 +28,9 @@ let number2 = ""
 numKeys.forEach((number) => {
   number.addEventListener('click', () => {
     if (operatorKey === "") {
-      number1 += parseInt(number.innerHTML)
+      number1 += parseFloat(number.innerHTML)
     } else {
-      number2 +=  parseInt(number.innerHTML)
+      number2 +=  parseFloat(number.innerHTML)
     }
     display.innerHTML += number.innerHTML;
   })
@@ -50,51 +50,4 @@ equalsButton.addEventListener('click', () => {
 
 
 
-
-
-
-
-
-
-
-
-/*numKeys.addEventListener("click", e => {
- if (e.target.matches("button")) {
-  const key = e.target
-  const action = key.dataset.action
-  const keyContent = key.textContent
-  const displayedNum = display.textContent
-
-  if (!action) {
-    if (displayedNum === '0') {
-      display.textContent += keyContent;
-    }else {
-      display.textContent = displayedNum + keyContent;
-    }
-  }
-  if (
-    action === 'add' ||
-    action === 'subtract' ||
-    action === 'multiply' ||
-    action === 'divide'
-  ) {
-    display.textContent = keyContent
-  }else {
-    display.textContent = displayedNum + keyContent
-  }
-  if (action === 'decimal') {
-    display.textContent = keyContent
-  }else {
-    display.textContent = displayedNum + keyContent
-  }
-  
-  if (action === 'clear') {
-  }
-  
-  if (action === 'calculate') {
-    
-  }
-
- }
-});*/
 
