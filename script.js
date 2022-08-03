@@ -4,13 +4,13 @@ const calculate= (number1, operator, number2) => {
   result = parseFloat(number1) + parseFloat(number2);
 }
 else if (operator === '-') {
-  result = number1 - number2;
+  result =  parseFloat(number1) - parseFloat(number2);
 }
 else if (operator === '*') {
-  result = number1 * number2;
+  result = parseFloat(number1) * parseFloat(number2);
 }
 else if (operator === '/') {
-  result =number1 / number2;
+  result = parseFloat(number1) / parseFloat(number2);
 }
 return result;
 } 
@@ -20,6 +20,7 @@ const display = calculator.querySelector('.calculator_display')
 const operatorKeys = calculator.querySelectorAll('.keyOperator')
 const numKeys= calculator.querySelectorAll('.numKey')
 let equalsButton= calculator.querySelector('.equalsButton')
+const ACButton = calculator.querySelector('.AC')
 
 let number1 = ""
 let operatorKey = "" 
@@ -30,7 +31,7 @@ numKeys.forEach((number) => {
     if (operatorKey === "") {
       number1 += parseFloat(number.innerHTML)
     } else {
-      number2 +=  parseFloat(number.innerHTML)
+      number2 += parseFloat(number.innerHTML)
     }
     display.innerHTML += number.innerHTML;
   })
@@ -47,7 +48,9 @@ equalsButton.addEventListener('click', () => {
   display.innerHTML = calculate(number1, operatorKey, number2)
 })
 
-
+ACButton.addEventListener('click', () => {
+  display.innerHTML = ""
+})
 
 
 
