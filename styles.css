@@ -67,7 +67,14 @@
     justify-content: none;
     width: 90px;
   }
+  .container .calculator_display {
+    width: 25vw;
+    border-radius: 5%;
+  }
   .container .calculator_keys {
     width: 25vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
   }
 }
