@@ -1,24 +1,25 @@
-/*const calculate= (number1, operator, number2) => {
+const calculate= (number1, operator, number2) => {
   let result = ''
-  if (operator === 'add') {
-  result = number1 + number2;
+  if (operator === '+') {
+  result = number1 + parseInt(number2);
 }
-else if (operator === 'subtract') {
+else if (operator === '-') {
   result = number1 - number2;
 }
-else if (operator === 'multiply') {
+else if (operator === '*') {
   result = number1 * number2;
 }
-else if (operator === 'divide') {
+else if (operator === '/') {
   result =number1 / number2;
 }
 return result;
-} */
+} 
 
 const calculator = document.querySelector('.calculator')
 const display = calculator.querySelector('.calculator_display')
 const operatorKeys = calculator.querySelectorAll('.keyOperator')
 const numKeys= calculator.querySelectorAll('.numKey')
+let equalsButton= calculator.querySelector('.equalsButton')
 
 let number1 = ""
 let operatorKey = "" 
@@ -26,8 +27,11 @@ let number2 = ""
 
 numKeys.forEach((number) => {
   number.addEventListener('click', () => {
-    number1 += parseInt(number.innerHTML)
-    number2 += parseInt(number.innerHTML)
+    if (operatorKey === "") {
+      number1 += parseInt(number.innerHTML)
+    } else {
+      number2 +=  parseInt(number.innerHTML)
+    }
     display.innerHTML += number.innerHTML;
   })
 })
@@ -39,11 +43,9 @@ operatorKeys.forEach((operator) => {
   })
 })
 
-const calculate = () =>{
-  return number1
-}
-
-
+equalsButton.addEventListener('click', () => {
+  display.innerHTML = calculate(number1, operatorKey, number2)
+})
 
 
 
