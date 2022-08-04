@@ -1,17 +1,18 @@
 const calculate= (number1, operator, number2) => {
   let result = ''
   if (operator === '+') {
-  result = parseFloat(number1) + parseFloat(number2);
+  result = parseFloat(parseFloat(number1).toFixed(3)) + parseFloat(parseFloat(number2).toFixed(3));
 }
 else if (operator === '-') {
-  result =  parseFloat(number1) - parseFloat(number2);
+  result =  parseFloat(number1).toFixed(3) - parseFloat(number2).toFixed(3);
 }
 else if (operator === '*') {
-  result = parseFloat(number1) * parseFloat(number2);
+  result = parseFloat(number1).toFixed(3) * parseFloat(number2).toFixed(3);
 }
 else if (operator === '/') {
-  result = parseFloat(number1) / parseFloat(number2);
+  result = parseFloat(number1).toFixed(3) / parseFloat(number2).toFixed(3);
 }
+console.log(result)
 return result;
 } 
 
@@ -29,10 +30,11 @@ let number2 = ""
 numKeys.forEach((number) => {
   number.addEventListener('click', () => {
     if (operatorKey === "") {
-      number1 += parseFloat(number.innerHTML)
+      number1 += number.innerHTML
     } else {
-      number2 += parseFloat(number.innerHTML)
+      number2 += number.innerHTML
     }
+  
     display.innerHTML += number.innerHTML;
   })
 })
@@ -40,7 +42,7 @@ numKeys.forEach((number) => {
 operatorKeys.forEach((operator) => {
   operator.addEventListener('click', () =>{
     operatorKey = operator.innerHTML
-    display.innerHTML += operator.innerHTML;
+    display.innerHTML = number1 + operatorKey + number2;
   })
 })
 
@@ -49,8 +51,10 @@ equalsButton.addEventListener('click', () => {
 })
 
 ACButton.addEventListener('click', () => {
-  display.innerHTML = ""
+  number1 = ""
+  operatorKey = "" 
+  number2 = ""
+  display.textContent= ""
 })
-
 
 
